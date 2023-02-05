@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="agreement_menu"
+              name="Agreement"
+              web_icon="crm,static/description/icon.png"
+              sequence="15"
+    />
+
+    <menuitem id="agreement_agreement_menu"
+              name="Agreement"
+              parent="agreement_menu"
+              action="agreement_agreement_action"
+    />
+
+    <menuitem id="agreement_menu_configuration"
+              name="Configuration"
+              parent="agreement_menu"
+              sequence="100"
+              groups="group_agreement_manager"/>
+
+    <menuitem id="agreement_type_menu"
+              name="Agreement Type"
+              parent="agreement_menu_configuration"
+              action="agreement_type_action"
+              groups="group_agreement_manager"
+    />
+</odoo>

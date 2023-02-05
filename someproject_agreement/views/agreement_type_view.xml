@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="agreement_type_view_tree" model="ir.ui.view">
+        <field name="name">agreement.type.view.tree</field>
+        <field name="model">agreement.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="agreement_type_view_form" model="ir.ui.view">
+        <field name="name">agreement.type.view.form</field>
+        <field name="model">agreement.type</field>
+        <field name="arch" type="xml">
+            <form string="Agreement Type">
+                <sheet>
+                   <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="e.g. My Agreement Type"/>
+                        </h1>
+                    </div>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="agreement_type_action" model="ir.actions.act_window">
+        <field name="name">Agreement Types</field>
+        <field name="res_model">agreement.type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
